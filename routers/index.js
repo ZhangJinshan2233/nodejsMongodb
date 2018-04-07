@@ -1,9 +1,10 @@
-const userRouter=require('./userRouter');
+var userRouter=require('./userRouter');
 
-// const skillRouter=require('./skillRouter');
+var skillRouter=require('./skillRouter');
 
-
+console.log("test index")
 module.exports={
-    userRouter:userRouter,
-    // skillRouter:skillRouter
+    skillRouter:skillRouter,
+    userRouter:userRouter
+    
 }

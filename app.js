@@ -11,12 +11,15 @@ app.use('/bootstrap/css',express.static(__dirname+'/public/bootstrap/css'));
 app.use('/bootstrap/js',express.static(__dirname+'/public/bootstrap/js'))
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
-console.log("test")
+
 app.get('/',(req,res,next)=>{
     res.redirect('/users')
 })
 
 app.use('/users',routers.userRouter);
+console.log("test")
+app.use('/skills',routers.skillRouter);
+console.log("test")
 //deal with error
 app.use(function(err,req,res,next){
     res.send(err.message);
